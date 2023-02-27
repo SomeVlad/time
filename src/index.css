@@ -5,20 +5,9 @@ body {
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    height: calc(var(--vh, 1vh) * 100);
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* Avoid Chrome to see Safari hack */
-/*
-@supports (-webkit-touch-callout: none) {
-    body {
-        !* The hack for Safari *!
-        height: -webkit-fill-available;
-        overflow: hidden;
-    }
-}*/

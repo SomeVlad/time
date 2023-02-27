@@ -1,6 +1,3 @@
-:root {
-    --line-height: 1vh;
-}
 
 .line-container {
     height: var(--line-height);
@@ -19,7 +16,7 @@
 }
 
 .line-label {
-    font-size: 1vh;
+    font-size: var(--line-height);
     line-height: 1;
     position: absolute;
     right: 0;
@@ -27,7 +24,7 @@
 }
 
 .line-label_overflow {
-    top: -1vh;
+    top: calc(-1 * var(--line-height));
     left: 0;
     right: auto;
 }
