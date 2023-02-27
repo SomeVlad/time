@@ -1,0 +1,33 @@
+:root {
+    --line-height: 1vh;
+}
+
+.line-container {
+    height: var(--line-height);
+    width: 100%;
+    background-color: #e5e5f7;
+    background-image: linear-gradient(#9d9ff8 1px, transparent 1px), linear-gradient(to right, #9d9ff8 1px, #e5e5f7 1px);
+    background-size: var(--line-height) var(--line-height);
+}
+
+.line-filler {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: width 0.2s ease-in-out;
+    text-align: right;
+    position: relative;
+}
+
+.line-label {
+    font-size: 1vh;
+    line-height: 1;
+    position: absolute;
+    right: 0;
+    color: white;
+}
+
+.line-label_overflow {
+    top: -1vh;
+    left: 0;
+    right: auto;
+}
