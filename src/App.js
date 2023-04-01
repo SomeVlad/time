@@ -2,8 +2,8 @@ import { ActiveLine, Line } from './line'
 
 const openTime = Date.now()
 const lines = 100
-const firstDate = '2023-02-15T09:36:00.000+01:00'
-const secondDate = '2023-03-09T15:45:00.000+01:00'
+const firstDate = '2023-03-31T17:40:00.000+02:00'
+const secondDate = '2023-04-23T18:00:00.000+02:00'
 
 const startTime = new Date(firstDate).getTime()
 const endTime = new Date(secondDate).getTime()
