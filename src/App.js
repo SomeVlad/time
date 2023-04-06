@@ -1,19 +1,37 @@
+import { useEffect, useState } from 'react'
 import { ActiveLine, Line } from './line'
 
-const openTime = Date.now()
+const updateLinesTimeout = 1000
 const lines = 100
+const oneLinePercentage = 100 / lines
+
 const firstDate = '2023-03-31T17:40:00.000+02:00'
 const secondDate = '2023-04-23T18:00:00.000+02:00'
 
 const startTime = new Date(firstDate).getTime()
 const endTime = new Date(secondDate).getTime()
+const timeDiff = endTime - startTime
 
-const completed = 100 * (openTime - startTime) / (endTime - startTime)
-const oneLinePercentage = 100 / lines
+const calcCompletedLines = () => {
+    const completed = 100 * (Date.now() - startTime) / timeDiff
 
-const completedLinesAmount = Math.floor(completed / oneLinePercentage)
+    return Math.floor(completed / oneLinePercentage)
+}
 
 function App() {
+    const [completedLinesAmount, setCompletedLinesAmount] = useState(calcCompletedLines())
+
+    const tick = () => {
+        setCompletedLinesAmount(calcCompletedLines())
+    }
+
+    // tick()
+    useEffect(() => {
+        const intervalId = setInterval(tick, updateLinesTimeout)
+
+        return () => clearInterval(intervalId)
+    }, [])
+
     return (
         <div>
             {new Array(completedLinesAmount).fill(null).map((_, i) => {
