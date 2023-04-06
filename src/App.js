@@ -6,7 +6,7 @@ const lines = 100
 const oneLinePercentage = 100 / lines
 
 const firstDate = '2023-03-31T17:40:00.000+02:00'
-const secondDate = '2023-04-23T18:00:00.000+02:00'
+const secondDate = '2023-04-23T11:35:00.000+02:00'
 
 const startTime = new Date(firstDate).getTime()
 const endTime = new Date(secondDate).getTime()
